@@ -134,7 +134,7 @@ font:
     family: Fira Code Nerd Font Mono
 
     # The `style` can be specified to pick a specific face.
-    style: Bold
+    style: Regular
 
   # Bold font face
   #bold:
@@ -175,9 +175,9 @@ font:
   # Offset is the extra space around each character. `offset.y` can be thought
   # of as modifying the line spacing, and `offset.x` as modifying the letter
   # spacing.
-  offset:
-    x: -1
-    y: -1
+  #offset:
+    #x: -1
+    #y: -1
 
   # Glyph offset determines the locations of the glyphs within their cells with
   # the default being at the bottom. Increasing `x` moves the glyph to the
@@ -200,8 +200,8 @@ font:
 colors:
   # Default colors
   primary:
-    background: '0x1d1f21'
-    foreground: '0xc5c8c6'
+    background: '#2d2d2d'
+    foreground: '#c5c8c6'
 
     # Bright and dim foreground colors
     #
@@ -294,24 +294,24 @@ colors:
 
   # Normal colors
   normal:
-    black:   '#1d1f21'
-    red:     '#cc342b'
-    green:   '#198844'
-    yellow:  '#fba922'
-    blue:    '#3971ed'
-    magenta: '#a36ac7'
-    cyan:    '#3971ed'
-    white:   '#c5c8c6'
+    black:   '#2d2d2d'
+    red:     '#f2777a'
+    green:   '#99cc99'
+    yellow:  '#f99157'
+    blue:    '#6699cc'
+    magenta: '#cc99cc'
+    cyan:    '#66cccc'
+    white:   '#b4b7b4'
 
   # Bright colors
   bright:
     black:   '#969896'
-    red:     '#cc342b'
-    green:   '#198844'
-    yellow:  '#fba922'
-    blue:    '#3971ed'
-    magenta: '#a36ac7'
-    cyan:    '#3971ed'
+    red:     '#f2777a'
+    green:   '#99cc99'
+    yellow:  '#f99157'
+    blue:    '#6699cc'
+    magenta: '#cc99cc'
+    cyan:    '#66cccc'
     white:   '#ffffff'
 
   # Dim colors

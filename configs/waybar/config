@@ -111,7 +111,7 @@
     },
     "backlight": {
         // "device": "acpi_video1",
-        "format": "{percent}% {icon}",
+        "format": "{icon} {percent}%",
         "format-icons": ["", "", "", "", "", "", "", "", ""]
     },
     "battery": {
@@ -123,7 +123,7 @@
         "format": "{capacity}% {icon}",
         "format-charging": "{capacity}% ",
         "format-plugged": "{capacity}% ",
-        "format-alt": "{time} {icon}",
+        "format-alt": "{time}  {icon}",
         // "format-good": "", // An empty format will hide the module
         // "format-full": "",
         "format-icons": [" ", " ", " ", " ", " "]
@@ -142,19 +142,19 @@
     },
     "pulseaudio": {
         // "scroll-step": 10, // %, can be a float
-        "format": "{volume}% {icon} {format_source}",
-        "format-bluetooth": "{volume}% {icon}  {format_source}",
+        "format": "{icon} {volume}% {format_source}",
+        "format-bluetooth": "{{icon} volume}%   {format_source}",
         "format-bluetooth-muted": " {icon}  {format_source}",
         "format-muted": " {format_source}",
-        "format-source": "{volume}% ",
+        "format-source": " {volume}%",
         "format-source-muted": "",
         "format-icons": {
-            "headphone": "  ",
-            "hands-free": "  ",
+            "headphone": " ",
+            "hands-free": " ",
             "headset": "  ",
-            "phone": "",
-            "portable": "",
-            "car": "",
+            "phone": " ",
+            "portable": " ",
+            "car": " ",
             "default": ["", "", " "]
         },
         "on-click": "pavucontrol"
