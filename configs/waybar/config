@@ -1,22 +1,21 @@
 {
     "layer": "top", // Waybar at top layer
     "position": "top", // Waybar position (top|bottom|left|right)
-    "height": 34, // Waybar height (to be removed for auto height)
+    "height": 30, // Waybar height (to be removed for auto height)
     // "width": 1280, // Waybar width
     "spacing": 4, // Gaps between modules (4px)
     // Choose the order of the modules
-    "modules-left": ["wlr/workspaces", "custom/updates"],
+    "modules-left": ["wlr/workspaces", "hyprland/mode", "hyprland/scratchpad", "custom/media"],
     "modules-center": ["hyprland/window"],
-    "modules-right": ["idle_inhibitor", "pulseaudio", "backlight", "battery", "clock", "tray"],
+    "modules-right": ["idle_inhibitor", "pulseaudio", "backlight", "sway/language", "battery", "battery#bat2", "clock", "tray"],
     // Modules configuration
      "wlr/workspaces": {
          "disable-scroll": true,
-         "on-click": "activate",
-         // "all-outputs": false,
-         // "format": "{name}: {icon}",
-         "format": "{name}",
          "on-scroll-up": "hyprctl dispatch workspace m-1 > /dev/null",
          "on-scroll-down": "hyprctl dispatch workspace m+1 > /dev/null",
+         "on-click": "activate",
+    //   "all-outputs": true,
+    //   "format": "{name}: {icon}",
          "format-icons": {
              "1": "",
              "2": "",
@@ -29,8 +28,8 @@
          }
      },
     "keyboard-state": {
-        "numlock": false,
-        "capslock": false,
+        "numlock": true,
+        "capslock": true,
         "format": "{name} {icon}",
         "format-icons": {
             "locked": "",
@@ -85,14 +84,14 @@
         }
     },
     "tray": {
-        // "icon-size": 32,
+        // "icon-size": 21,
         "spacing": 0
     },
     "clock": {
-        // "timezone": "Asia/Manila",
+        // "timezone": "America/New_York",
         "format": "{:%I:%M %p}",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        "format-alt": "{:%Y-%m-%d}"
+        "format-alt": "{:%m-%d-%Y}"
     },
     "cpu": {
         "format": "{usage}% ",
@@ -107,11 +106,11 @@
         "critical-threshold": 80,
         // "format-critical": "{temperatureC}°C {icon}",
         "format": "{temperatureC}°C {icon}",
-        "format-icons": ["", "", ""]
+        "format-icons": ["", "", ""]
     },
     "backlight": {
         // "device": "acpi_video1",
-        "format": "{icon} {percent}%",
+        "format": "{percent}% {icon}",
         "format-icons": ["", "", "", "", "", "", "", "", ""]
     },
     "battery": {
@@ -123,10 +122,10 @@
         "format": "{capacity}% {icon}",
         "format-charging": "{capacity}% ",
         "format-plugged": "{capacity}% ",
-        "format-alt": "{time}  {icon}",
+        "format-alt": "{time} {icon}",
         // "format-good": "", // An empty format will hide the module
         // "format-full": "",
-        "format-icons": [" ", " ", " ", " ", " "]
+        "format-icons": [" ", " ", " ", " ", " "]
     },
     "battery#bat2": {
         "bat": "BAT2"
@@ -141,33 +140,35 @@
         "format-alt": "{ifname}: {ipaddr}/{cidr}"
     },
     "pulseaudio": {
-        // "scroll-step": 10, // %, can be a float
-        "format": "{icon} {volume}% {format_source}",
-        "format-bluetooth": "{{icon} volume}%   {format_source}",
-        "format-bluetooth-muted": " {icon}  {format_source}",
+        // "scroll-step": 1, // %, can be a float
+        "format": "{volume}% {icon} {format_source}",
+        "format-bluetooth": "{volume}% {icon} {format_source}",
+        "format-bluetooth-muted": " {icon} {format_source}",
         "format-muted": " {format_source}",
-        "format-source": " {volume}%",
+        "format-source": "{volume}% ",
         "format-source-muted": "",
         "format-icons": {
             "headphone": " ",
-            "hands-free": " ",
-            "headset": "  ",
-            "phone": " ",
-            "portable": " ",
-            "car": " ",
-            "default": ["", "", " "]
+            "hands-free": " ",
+            "headset": " ",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", "", ""]
         },
         "on-click": "pavucontrol"
     },
-    "custom/updates": {
-        "format": "{} {icon}",
+    "custom/media": {
+        "format": "{icon} {}",
         "return-type": "json",
+        "max-length": 40,
         "format-icons": {
-            "has-updates": "󱍷",
-            "updated": "󰂪"
+            "spotify": "",
+            "default": "🎜"
         },
-        "exec-if": "which waybar-module-pacman-updates",
-        "exec": "waybar-module-pacman-updates"
+        "escape": true,
+        "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null" // Script in resources folder
+        // "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
     }
 }
 

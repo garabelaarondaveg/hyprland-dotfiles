@@ -1,103 +1,98 @@
-@define-color base00 #181818;
-@define-color base01 #2b2e37;
-@define-color base02 #3C3C3C;
-@define-color base03 #585858;
-@define-color base04 #b8b8b8;
-@define-color base05 #d8d8d8;
-@define-color base06 #e8e8e8;
-@define-color base07 #f8f8f8;
-@define-color base08 #ab4642;
-@define-color base09 #dc9656;
-@define-color base0A #f7ca88;
-@define-color base0B #a1b56c;
-@define-color base0C #86c1b9;
-@define-color base0D #7cafc2;
-@define-color base0E #ba8baf;
-@define-color base0F #a16946;
-@define-color base0G #2A2A2A;
-
 * {
-  transition: none;
-  box-shadow: none;
+    /* `otf-font-awesome` is required to be installed for icons */
+    transition: none;
+    box-shadow: none;
 }
 
 #waybar {
 	font-family: Inter;
 	font-size: 1.2em;
 	font-weight: 400;
-  color: @base06;
-  background: @base0G;
-}
-
-#workspaces {
-  margin: 0 4px;
+    color: #e8e8e8;
+    background: #2A2A2A;
 }
 
 #workspaces button {
-  margin: 4px 0;
-  padding: 0 4px;
-  color: @base05;
-  font-weight: 400;
-  font-family: Inter;
+    margin: 4px 0;
+    padding: 0 4px;
+    color: #d8d8d8;
+    font-weight: 400;
+    font-family: Inter;
 }
 
-#workspaces button.visible {
+#workspaces button:hover {
+    background: rgba(0, 0, 0, 0.2);
 }
 
 #workspaces button.active {
-  border-radius: 4px;
-  background-color: @base02;
-  font-weight: 400;
-  font-family: Inter;
+    border-radius: 4px;
+    background-color: #3C3C3C;
+    font-weight: 400;
+    font-family: Inter;
 }
 
 #workspaces button.urgent {
-  color: rgba(238, 46, 36, 1);
+    margin: 4px 4px 4px 4px;
+    border-radius: 4px;
+    background-color: #3C3C3C;
+}
+
+#mode {
+    background-color: #64727D;
+    border-bottom: 3px solid #ffffff;
+}
+
+#clock,
+#battery,
+#cpu,
+#disk,
+#temperature,
+#backlight,
+#network,
+#pulseaudio,
+#wireplumber,
+#custom-media,
+#mode,
+#memory,
+#idle_inhibitor,
+#scratchpad,
+#mpd {
+  margin: 4px 2px;
+  padding: 0 6px;
+  border-radius: 4px;
+  min-width: 20px;
+  background-color: #3C3C3C;
+}
+
+#window,
+#workspaces {
+    font-size: 0.9em;
+	font-weight: 400;
+	font-family: Inter;
+}
+
+/* If workspaces is the leftmost module, omit left margin */
+.modules-left > widget:first-child > #workspaces {
+    margin-left: 0;
+}
+
+/* If workspaces is the rightmost module, omit right margin */
+.modules-right > widget:last-child > #workspaces {
+    margin-right: 0;
+}
+
+#tray * {
+  padding: 0 8px;
+  border-left: 1px solid #181818;
 }
 
 #tray {
   margin: 4px 4px 4px 4px;
   border-radius: 4px;
-  background-color: @base02;
-}
-
-#tray * {
-  padding: 0 8px;
-  border-left: 1px solid @base00;
+  background-color: #3C3C3C;
 }
 
 #tray *:first-child {
   border-left: none;
 }
 
-#mode, #battery, #cpu, #memory, #network, #pulseaudio, #idle_inhibitor, #backlight, #custom-storage, #custom-updates, #custom-weather, #custom-mail, #clock, #temperature {
-  margin: 4px 2px;
-  padding: 0 6px;
-  background-color: @base02;
-  border-radius: 4px;
-  min-width: 20px;
-}
-
-#pulseaudio.muted {
-  color: @base0F;
-}
-
-#pulseaudio.bluetooth {
-  color: @base0C;
-}
-
-#clock {
-  margin-left: 0px;
-  margin-right: 4px;
-  background-color: @base02;
-}
-
-#temperature.critical {
-  color: @base0F;
-}
-
-#window {
-  font-size: 0.9em;
-	font-weight: 400;
-	font-family: Inter;
-}
