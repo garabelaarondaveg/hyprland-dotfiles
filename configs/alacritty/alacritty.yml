@@ -131,21 +131,21 @@ font:
     #   - (macOS) Menlo
     #   - (Linux/BSD) monospace
     #   - (Windows) Consolas
-    family: Fira Code Nerd Font Mono
+    family: "FiraCode Nerd Font"
 
     # The `style` can be specified to pick a specific face.
     style: Regular
 
   # Bold font face
-  #bold:
+  bold:
     # Font family
     #
     # If the bold family is not specified, it will fall back to the
     # value specified for the normal font.
-    #family: monospace
+    family: "FiraCode Nerd Font"
 
     # The `style` can be specified to pick a specific face.
-    #style: Bold
+    style: Bold
 
   # Italic font face
   #italic:
@@ -170,7 +170,7 @@ font:
     #style: Bold Italic
 
   # Point size
-    size: 16.0
+    size: 18.0
 
   # Offset is the extra space around each character. `offset.y` can be thought
   # of as modifying the line spacing, and `offset.x` as modifying the letter
@@ -200,7 +200,7 @@ font:
 colors:
   # Default colors
   primary:
-    background: '#2d2d2d'
+    background: '#1d1f21'
     foreground: '#c5c8c6'
 
     # Bright and dim foreground colors
@@ -294,24 +294,24 @@ colors:
 
   # Normal colors
   normal:
-    black:   '#2d2d2d'
-    red:     '#f2777a'
-    green:   '#99cc99'
-    yellow:  '#f99157'
-    blue:    '#6699cc'
-    magenta: '#cc99cc'
-    cyan:    '#66cccc'
-    white:   '#b4b7b4'
+    black:   '#1d1f21'
+    red:     '#cc342b'
+    green:   '#198844'
+    yellow:  '#fba922'
+    blue:    '#3971ed'
+    magenta: '#a36ac7'
+    cyan:    '#3971ed'
+    white:   '#c5c8c6'
 
   # Bright colors
   bright:
     black:   '#969896'
-    red:     '#f2777a'
-    green:   '#99cc99'
-    yellow:  '#f99157'
-    blue:    '#6699cc'
-    magenta: '#cc99cc'
-    cyan:    '#66cccc'
+    red:     '#cc342b'
+    green:   '#198844'
+    yellow:  '#fba922'
+    blue:    '#3971ed'
+    magenta: '#a36ac7'
+    cyan:    '#3971ed'
     white:   '#ffffff'
 
   # Dim colors

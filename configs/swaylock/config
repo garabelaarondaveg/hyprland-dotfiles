@@ -2,11 +2,14 @@ daemonize
 show-failed-attempts
 screenshots
 clock
+timestr=%I:%M:%S %p
+datestr=%a %b %d, %Y
 effect-vignette=0.2:0.5
 effect-blur=4x2
-effect-scale=0.4
+effect-scale=0.7
 color=2A2A2A
-font="Inter"
+font=Cantarell
+font-size=58
 indicator
 indicator-radius=200
 indicator-thickness=20
@@ -33,6 +36,5 @@ bs-hl-color=2a2a2a
 grace=2
 grace-no-mouse
 grace-no-touch
-datestr="%m-%d-%y"
 fade-in="0.1"
 ignore-empty-password

@@ -1,3 +1,1 @@
-//@theme "/home/aaron/.local/share/rofi/themes/custom.rasi"
-//@theme "/home/aaron/.local/share/rofi/themes/custom.rasi"
-@theme "/home/aaron/.local/share/rofi/themes/custom.rasi"
+@theme "/usr/share/rofi/themes/android_notification.rasi"

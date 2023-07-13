@@ -2,12 +2,11 @@
     /* `otf-font-awesome` is required to be installed for icons */
     transition: none;
     box-shadow: none;
+    font-family: Cantarell, "Font Awesome 6 Free";
+    font-size: 17px;
 }
 
 #waybar {
-	font-family: Inter;
-	font-size: 1.2em;
-	font-weight: 400;
     color: #e8e8e8;
     background: #2A2A2A;
 }
@@ -16,8 +15,6 @@
     margin: 4px 0;
     padding: 0 4px;
     color: #d8d8d8;
-    font-weight: 400;
-    font-family: Inter;
 }
 
 #workspaces button:hover {
@@ -27,8 +24,6 @@
 #workspaces button.active {
     border-radius: 4px;
     background-color: #3C3C3C;
-    font-weight: 400;
-    font-family: Inter;
 }
 
 #workspaces button.urgent {
@@ -66,9 +61,6 @@
 
 #window,
 #workspaces {
-    font-size: 0.9em;
-	font-weight: 400;
-	font-family: Inter;
 }
 
 /* If workspaces is the leftmost module, omit left margin */
