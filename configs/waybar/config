@@ -88,8 +88,8 @@
         "spacing": 0
     },
     "clock": {
-        // "timezone": "America/New_York",
-        "format": "{:%a %b %d  %I:%M %p}",
+        "timezone": "Asia/Manila",
+        "format": "{:%a %b %d %I:%M %p}",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
         "format-alt": "{:%m-%d-%Y}"
     },
@@ -110,7 +110,7 @@
     },
     "backlight": {
         // "device": "acpi_video1",
-        "format": "{percent}% {icon}",
+        "format": "{icon}  {percent}%",
         "format-icons": ["", "", "", "", "", "", "", "", ""]
     },
     "battery": {
@@ -119,13 +119,14 @@
             "warning": 30,
             "critical": 15
         },
-        "format": "{capacity}% {icon}",
-        "format-charging": "{capacity}% ",
-        "format-plugged": "{capacity}% ",
-        "format-alt": "{time} {icon}",
+        "format": "{icon} {capacity}%",
+        "format-charging": " {capacity}%",
+        "format-plugged": "  {capacity}%",
+        "format-alt": "{icon} {capacity}% {time} ", 
         // "format-good": "", // An empty format will hide the module
         // "format-full": "",
-        "format-icons": ["", "", "", "", ""]
+        "format-icons": ["  ", "  ", "  ", "  ", "  "]
+
     },
     "battery#bat2": {
         "bat": "BAT2"
@@ -141,20 +142,20 @@
     },
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
-        "format": "{volume}% {icon} {format_source}",
-        "format-bluetooth": "{volume}% {icon} {format_source}",
-        "format-bluetooth-muted": " {icon} {format_source}",
-        "format-muted": " {format_source}",
-        "format-source": "On ",
-        "format-source-muted": "",
+        "format": "{icon} {volume}% {format_source} ",
+        "format-bluetooth": "{icon} {volume}% {format_source}",
+        "format-bluetooth-muted": "󰝟 {icon} {format_source}",
+        "format-muted": "󰝟  {format_source} ",
+        "format-source": "  On",
+        "format-source-muted": "  Off",
         "format-icons": {
-            "headphone": " ",
+            "headphone": "  ",
             "hands-free": " ",
             "headset": " ",
             "phone": "",
             "portable": "",
             "car": "",
-            "default": [" ", " ", " "]
+			"default": ["󰕿 ", "󰖀 ", "󰕾 "]
         },
         "on-click": "pavucontrol"
     },

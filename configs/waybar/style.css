@@ -2,7 +2,7 @@
     /* `otf-font-awesome` is required to be installed for icons */
     transition: none;
     box-shadow: none;
-    font-family: Cantarell, "Font Awesome 6 Free";
+    font-family: Cantarell;
     font-size: 17px;
 }
 
